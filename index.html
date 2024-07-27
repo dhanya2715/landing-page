@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Service</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(to right, #161615, #0b0607);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 160px 0 50px; /* Adjusted padding to accommodate the header */
+    background: linear-gradient(to right, #fefefe, #ffffff);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: rgb(4, 4, 4);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #fff9f3;
+    color: rgb(12, 12, 12);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0f0e0e;
+    color: white;
+}
+
+.services, .testimonials, .about, .contact {
+    padding: 100px 0 50px; /* Adjusted padding to accommodate the header */
+    text-align: center;
+}
+
+.services h2, .testimonials h2, .about h2, .contact h2 {
+    color: #030303;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-cards, .testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #090909;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #010101;
+    font-size: 16px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.about-col {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-col h3 {
+    color: #030303;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-col p, .about-col ul {
+    color: #010101;
+    font-size: 16px;
+    text-align: left;
+}
+
+.about-col ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #151414;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #100909;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover { 
+    background-color: #ece8e7;
+    color: black;
+}
+
+footer {
+    background-color: #0d0c0c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.pay {
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">🐾PETTY WORLD</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <img class="pay" src="images/doggy.webp" alt="Dog Care">
+            <h1>We Love Your Pets</h1>
+            <p>Professional care for your furry friends</p>
+            
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="images/istockphoto-969077342-612x612.jpg" alt="Dog Grooming">
+                    <h3>Dog Grooming</h3>
+                    <p>Professional grooming for your beloved pets.</p>
+                </div>
+                <div class="card">
+                    <img src="images/dog sitting.jpeg" alt="Pet Sitting">
+                    <h3>Dog Sitting</h3>
+                    <p>Reliable dog sitting services when you're away.</p>
+                </div>
+                <div class="card">
+                    <img src="images/dog training.jpeg" alt="Pet Training">
+                    <h3>Dog Training</h3>
+                    <p>Expert training for your pets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-cards">
+                <div class="card">
+                    <p>"Amazing service! My dog has never been happier."</p>
+                    <h3>- John Doe</h3>
+                </div>
+                <div class="card">
+                    <p>"Highly recommend! They took great care of my cat."</p>
+                    <h3>- Jane Smith</h3>
+                </div>
+                <div class="card">
+                    <p>"Professional and friendly staff. Will use again."</p>
+                    <h3>- Emily Johnson</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-row">
+                <div class="about-col">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is simple: to provide exceptional care, love, and attention to every dog we meet. We believe that every dog deserves the best, and we strive to make their lives happier and healthier.</p>
+                </div>
+                <div class="about-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Dog Walking: Regular walks tailored to your dog's needs.</li>
+                        <li>Pet Sitting: In-home care to keep your dog comfortable and safe.</li>
+                        <li>Grooming: Professional grooming to keep your dog looking their best.</li>
+                        <li>Training: Expert training for better behavior and obedience.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-row">
+                <div class="about-col">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>Experienced Staff: Our team is trained and certified in pet care.</li>
+                        <li>Personalized Care: We tailor our services to meet your dog's unique needs.</li>
+                        <li>Safety First: We prioritize your dog's safety and well-being.</li>
+                        <li>Flexible Scheduling: We offer flexible appointments to fit your busy life.</li>
+                    </ul>
+                </div>
+                <div class="about-col">
+                    <h3>Our Team</h3>
+                    <p>Our team of dedicated pet care professionals shares a love for dogs and a commitment to excellence. From our dog walkers to our groomers, each member is chosen for their expertise and compassion.</p>
+                </div>
+            </div>
+            <div class="about-row">
+                <div class="about-col">
+                    <h3>Our Promise</h3>
+                    <p>At Petty World, we promise to treat your dog like our own. Trust us to provide the care and love your furry friend deserves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pet Service. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
